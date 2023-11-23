@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: it.univaq.disim.mde2324.library.model.edit;singleton:=true
+Automatic-Module-Name: it.univaq.disim.mde2324.library.model.edit
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Activator: Juri.provider.JuriEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-19
+Export-Package: Juri.provider
+Require-Bundle: org.eclipse.core.runtime,
+ it.univaq.disim.mde2324.library.model;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy

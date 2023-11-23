@@ -1,0 +1,35 @@
+@"http://www.eclipse.org/OCL/Import"(ecore="http://www.eclipse.org/emf/2002/Ecore")
+@namespace(uri="http://www.eclipse.org/jj", prefix="jj")
+package Juri;
+
+class Library {
+	attr String[1] name;
+
+	@"http://www.eclipse.org/OCL/Collection"(nullFree="false")
+	!ordered val Book[*]#library books;
+
+	@"http://www.eclipse.org/OCL/Collection"(nullFree="false")
+	!ordered val Loan[*] loans;
+
+	@"http://www.eclipse.org/OCL/Collection"(nullFree="false")
+	!ordered val Member[*]#library members;
+}
+
+class Book {
+	attr String[1] name;
+	attr EBigInteger[1] copies;
+	ref Library#books library;
+}
+
+class Member {
+	attr String[1] name;
+	ref Library#members library;
+	ref Loan[*]#member loan;
+}
+
+class Loan {
+	ref Book[1] book;
+	ref Member[1]#loan member;
+	attr EDate date;
+}
+

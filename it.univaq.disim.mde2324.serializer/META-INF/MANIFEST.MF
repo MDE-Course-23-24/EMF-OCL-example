@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Serializer
+Bundle-SymbolicName: it.univaq.disim.mde2324.serializer
+Bundle-Version: 1.0.0.qualifier
+Export-Package: it.univaq.disim.mde2324.serializer
+Require-Bundle: it.univaq.disim.mde2324.library.model;bundle-version="1.0.0",
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.emf.ecore
+Automatic-Module-Name: it.univaq.disim.mde2324.serializer
+Bundle-RequiredExecutionEnvironment: JavaSE-19

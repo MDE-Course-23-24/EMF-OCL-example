@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<jj:Library xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:jj="http://www.eclipse.org/jj" name="JURI LIB">
+  <books name="Harry Potter 1" copies="3"/>
+  <books name="Harry Potter 2" copies="3"/>
+  <loans book="//@books.1" member="//@members.0"/>
+  <members name="Juri" loan="//@loans.0"/>
+</jj:Library>

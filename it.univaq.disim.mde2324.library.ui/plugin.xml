@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="it.univaq.disim.mde2324.library.ui.commands.category"
+            name="Juri Cat">
+      </category>
+      <command
+            categoryId="it.univaq.disim.mde2324.library.ui.commands.category"
+            name="Load Model"
+            id="it.univaq.disim.mde2324.library.ui.commands.loadCommand">
+      </command>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="it.univaq.disim.mde2324.library.ui.commands.category"
+            name="Juri Cat">
+      </category>
+      <command
+            categoryId="it.univaq.disim.mde2324.library.ui.commands.category"
+            name="Serialize Model"
+            id="it.univaq.disim.mde2324.library.ui.commands.serializeCommand">
+      </command>
+   </extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="it.univaq.disim.mde2324.library.ui.commands.category"
+            name="Juri Cat">
+      </category>
+      <command
+            categoryId="it.univaq.disim.mde2324.library.ui.commands.category"
+            name="Validate Model"
+            id="it.univaq.disim.mde2324.library.ui.commands.validateCommand">
+      </command>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="it.univaq.disim.mde2324.library.ui.handlers.LoadHandler"
+            commandId="it.univaq.disim.mde2324.library.ui.commands.loadCommand">
+      </handler>
+   </extension>
+      <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="it.univaq.disim.mde2324.library.ui.handlers.SerializeHandler"
+            commandId="it.univaq.disim.mde2324.library.ui.commands.serializeCommand">
+      </handler>
+   
+   </extension>
+      <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="it.univaq.disim.mde2324.library.ui.handlers.ValidateHandler"
+            commandId="it.univaq.disim.mde2324.library.ui.commands.validateCommand">
+      </handler>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="it.univaq.disim.mde2324.library.ui.commands.loadCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="it.univaq.disim.mde2324.library.ui.menus.loadeMenu"
+               label="Juri Model Menu"
+               mnemonic="M">
+            <command
+                  commandId="it.univaq.disim.mde2324.library.ui.commands.loadCommand"
+                  id="it.univaq.disim.mde2324.library.ui.menus.loadCommand"
+                  mnemonic="L">
+            </command>
+            <command
+                  commandId="it.univaq.disim.mde2324.library.ui.commands.serializeCommand"
+                  id="it.univaq.disim.mde2324.library.ui.menus.loadCommand"
+                  mnemonic="S">
+			</command>
+			<command
+                  commandId="it.univaq.disim.mde2324.library.ui.commands.validateCommand"
+                  id="it.univaq.disim.mde2324.library.ui.menus.validateCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+
+         
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="it.univaq.disim.mde2324.library.ui.toolbars.loadToolbar">
+            <command
+                  id="it.univaq.disim.mde2324.library.ui.toolbars.loadCommand"
+                  commandId="it.univaq.disim.mde2324.library.ui.commands.loadCommand"
+                  icon="icons/sample.png"
+                  tooltip="Say hello world">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

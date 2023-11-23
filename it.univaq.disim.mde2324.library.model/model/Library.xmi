@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jj:Library
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:jj="http://www.eclipse.org/jj"
+    name="JURI">
+  <books name="HP1"
+      copies="1"/>
+  <loans book="//@books.0"
+      member="//@members.0"
+      date="2023-12-05T00:00:00.000+0100"/>
+  <members name="JURI"
+      loan="//@loans.0"/>
+</jj:Library>

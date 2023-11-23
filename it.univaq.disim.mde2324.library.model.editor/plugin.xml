@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Juri -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="Juri.presentation.JuriModelWizardID"
+            name="%_UI_JuriModelWizard_label"
+            class="Juri.presentation.JuriModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/JuriModelFile.gif">
+         <description>%_UI_JuriModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Juri -->
+      <editor
+            id="Juri.presentation.JuriEditorID"
+            name="%_UI_JuriEditor_label"
+            icon="icons/full/obj16/JuriModelFile.gif"
+            extensions="juri"
+            class="Juri.presentation.JuriEditor"
+            contributorClass="Juri.presentation.JuriActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
